@@ -15,7 +15,7 @@ body {
         overflow: hidden;
     }
 }
-
+.pagewrapper {
 *,
 *::before,
 *::after {
@@ -23,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+}
 .pagewrapper {
     min-height: 100%;
     display: flex;
@@ -34,9 +34,13 @@ body {
         flex: 1 1 auto;
     }
 }
-
+.dad-test-page .dad-home-sec-1-r-img-wrap img {
+    max-width: inherit;
+}
+.pagewrapper {
 img {
     max-width: 100%;
+}
 }
 
 @media(min-width:1400px) {
