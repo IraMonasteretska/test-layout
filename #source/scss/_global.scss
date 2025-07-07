@@ -1,0 +1,239 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: #121212;
+
+    &.hidden {
+        overflow: hidden;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.pagewrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .main {
+        flex: 1 1 auto;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+@media(min-width:1400px) {
+    .container {
+        max-width: 1324px;
+    }
+}
+
+.white-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 45px;
+    border-radius: 30px;
+    background: #fff;
+    border: 1px solid #fff;
+    color: #121212;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 4px 24px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        background: #121212;
+    }
+}
+
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+
+    span {
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: rgba(#fff, 0.5);
+            bottom: -4px;
+            position: absolute;
+            transition: 0.3s;
+        }
+    }
+
+    img {
+        margin-left: 16px;
+        width: 49px;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        img {
+            transform: translateX(5px);
+        }
+
+        span {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+h1 {
+    color: #fff;
+    line-height: 130%;
+    font-size: 52px;
+    font-weight: 700;
+    font-family: 'Miller_Banner_Bold';
+    margin-bottom: 32px;
+}
+
+h2 {
+    color: #fff;
+    line-height: 142%;
+    font-size: 42px;
+    font-weight: 700;
+    font-family: 'Miller_Banner_Bold';
+}
+
+h3 {
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Miller_Banner_Bold';
+    line-height: 150%;
+    font-size: 32px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+@-webkit-keyframes rotatean {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes move {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1399.8px) {
+
+    h1 {
+        font-size: 46px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+}
+
+@media(max-width:1199.8px) {
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    .text-lg-left {
+        text-align: left;
+    }
+}
+
+@media(max-width:991.8px) {
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+}
+
+@media(max-width:767.8px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media(max-width:575.8px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+}
