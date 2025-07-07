@@ -1,0 +1,183 @@
+.booksection {
+    padding: 70px 0 100px;
+}
+
+.back {
+    margin-bottom: 16px;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+
+        img {
+            width: 24px;
+            margin-right: 16px;
+            transition: 0.3s;
+        }
+
+        span {
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                height: 1px;
+                width: 0;
+                background: #fff;
+                position: absolute;
+                right: 0;
+                bottom: -2px;
+                transition: 0.3s;
+            }
+        }
+
+        &:hover {
+            img {
+                transform: translateX(-10px);
+            }
+
+            span {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.bookserv {
+    border-radius: 20px;
+    background: #fff;
+    padding: 36px;
+
+    h2 {
+        margin-bottom: 19px;
+        color: #121212;
+        text-align: center;
+    }
+
+    .bookserv__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .btnwrap {
+            width: 100%;
+            max-width: 200px;
+            flex: 0 0 200px;
+            text-align: right;
+
+            button {
+                height: 45px;
+                background: #121212;
+                border: 1px solid #121212;
+                max-width: 100%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: #fff;
+                font-weight: 500;
+                font-size: 16px;
+                padding: 3px 24px;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #121212;
+                    background: #fff;
+                }
+            }
+        }
+
+        .intro {
+            width: 100%;
+            max-width: calc(100% - 200px);
+            flex: 0 0 calc(100% - 200px);
+            border-left: 1px solid #121212;
+            padding-left: 18px;
+
+            h4 {
+                margin-bottom: 6px;
+                color: #121212;
+                font-size: 24px;
+                font-family: 'Miller_Banner_Bold';
+                font-weight: 700;
+            }
+
+            p {
+                margin-bottom: 6px;
+                color: #121212;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+
+        }
+    }
+}
+
+.calendywrap__header {
+    margin-bottom: 60px;
+
+    h2 {
+        margin-bottom: 12px;
+        color: #fff;
+    }
+
+    p {
+        margin: 0;
+        color: #fff;
+    }
+}
+
+.ourservicesrow.hide {
+    display: none;
+}
+
+.calendywrap {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+@media(max-width:767.8px) {
+    .bookserv .bookserv__info {
+        flex-wrap: wrap;
+    }
+
+    .bookserv .bookserv__info .btnwrap {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .bookserv .bookserv__info .intro,
+    .bookserv .bookserv__info .btnwrap {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .booksection {
+        padding: 50px 0 70px;
+    }
+}
+
+@media(max-width:575.8px) {
+
+    .bookserv {
+        padding: 30px 20px;
+    }
+
+}
